@@ -1,0 +1,178 @@
+<!-- Nombres y apellidos: Noelia Castillo Rodriguez -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PASO 1: Cambia el título por el nombre de tu negocio -->
+  <title>Academia OciCat</title>
+
+  <!-- Enlace a la hoja de estilos -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       CABECERA
+       Contiene el nombre del negocio y el menú de navegación.
+       ============================================================ -->
+  <header>
+
+    <!-- PASO 2: Cambia este texto por el nombre de tu negocio -->
+    <div class="logo">Academia OciCat</div>
+
+    <!-- Botón de menú para móvil (solo visible en pantallas pequeñas) -->
+    <button class="menu-toggle" id="menu-toggle">☰ Menú</button>
+
+    <!-- PASO 3: Puedes cambiar los textos de los enlaces si quieres -->
+    <nav id="navegacion">
+      <a href="#servicios" title="Anar cap la llista de serveis">Serveis</a>
+      <a href="" title="Anar a la llista de events">Events</a>
+      <a href="" title="Anar a la llista de tornejos">Tornejos</a>
+      <a href="" title="Anar al formulari de contacte">Contacte</a>
+      <!-- otros enlaces -->
+    </nav>
+
+  </header>
+  <main>
+
+  <!-- ============================================================
+       SECCIÓN HERO (BIENVENIDA)
+       La primera sección que ve el usuario al entrar.
+       ============================================================ -->
+  <section id="hero">
+
+    <!-- PASO 4: Cambia el título y la frase de bienvenida -->
+    <h1>Academia OciCat</h1>
+    <p>Vols aprendre a jugar a un joc de taula i no tens amics? No et preocupis! Amb la Academia OciCat podràs aprendre a jugar jocs de taula, de cartes, rol... només has de tenir ganes, nosaltres aportem la resta.</p>
+
+    <!-- Botón que lleva al formulario de contacto -->
+    <a href="#contacto" class="boton">Contacta'ns</a>
+
+  </section>
+
+
+  <!-- ============================================================
+       SECCIÓN SERVICIOS / PRODUCTOS
+       Tres tarjetas con lo que ofrece tu negocio.
+       ============================================================ -->
+  <section id="servicios">
+
+    <h2>Els nostres serveis</h2>
+
+    <div class="tarjetas">
+
+      <!-- PASO 5: Cambia el emoji, título y descripción de cada tarjeta -->
+      <div class="tarjeta">
+        <div class="tarjeta-icono"><img src="images/producto.png" alt="Producto 1"></div>
+        <h3>Magic TCG</h3>
+        <p>Apren a jugar 1-vs-1 a Modern o amb mes persones en el mode Commander</p>
+      </div>
+      <div class="tarjeta">
+        <div class="tarjeta-icono"><img src="images/producto.png" alt="Producto 1"></div>
+        <h3>Catan - Joc de taula</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque rerum impedit fugiat dolor, atque saepe eos dolorum harum amet et consequatur distinctio earum iste, assumenda consectetur natus odit deleniti reiciendis?</p>
+      </div>
+      <div class="tarjeta">
+        <div class="tarjeta-icono"><img src="images/producto.png" alt="Producto 1"></div>
+        <h3>Vampire The Masquerade - Joc de rol</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nulla debitis ducimus voluptates rerum tempora eveniet harum consequuntur culpa natus illo minima minus blanditiis maxime hic, nihil delectus reiciendis nostrum.</p>
+      </div>      
+
+      <!-- Duplica aquí con los otros servicios / productos -->
+
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       [EXTRA] SECCIÓN TESTIMONIOS
+       ============================================================ -->
+
+
+  <section section id="testimonios">
+    <div class="testimonio">
+      <p class="testimonio-texto">"Comprava cartes de Magic per col·lecció i ara puc aprendre a fer-les servir!"</p>
+      <p class="testimonio-autor">— Pau Serrallonga Sarrià</p>
+      <p class="testimonio-estrellas" style="--puntuacion: 4.5;"></p>
+    </div>
+    <div class="testimonio">
+      <p class="testimonio-texto">"He pogut aprendre a jugar a rol. No em feia falta tenir amics, només ganes de aprendre!"</p>
+      <p class="testimonio-autor">— Laura Rodriguez</p>
+      <p class="testimonio-estrellas" style="--puntuacion: 5;"></p>
+    </div>
+    <div class="testimonio">
+      <p class="testimonio-texto">"Encara falta gent per poder jugar a Catan."</p>
+      <p class="testimonio-autor">— Laura Martinez</p>
+      <p class="testimonio-estrellas" style="--puntuacion: 3.5;"></p>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       SECCIÓN SOBRE NOSOTROS
+       Un párrafo presentando el negocio.
+       ============================================================ -->
+  <section id="nosotros">
+
+    <h2>Academia OciCat: Qui som?</h2>
+
+    <!-- PASO 6: Escribe aquí una descripción de tu negocio imaginario -->
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, voluptatum temporibus. Harum in minima placeat cum dolor, nobis culpa assumenda repudiandae dolore explicabo esse voluptatum ut, ullam, architecto consectetur! Nihil!</p>
+  </section>
+
+  <!-- ============================================================
+       [EXTRA] SECCIÓN FAQ
+       ============================================================ -->
+  <section>
+    <details>
+      <summary>Cual es vuestro horario?</summary>
+        <p>Abrimos de lunes a sabado, de 9:00 a 20:00.</p>
+    </details>
+  </section>
+  <!-- ============================================================
+       SECCIÓN CONTACTO
+       Formulario con nombre, email y mensaje.
+       ============================================================ -->
+  <section id="contacto">
+
+    <h2>Contacte</h2>
+    <p>¿Tienes alguna pregunta? Escríbenos y te respondemos lo antes posible.</p>
+
+    <!-- Formulario de contacto -->
+    <form id="formulario-contacto" action="" method="post">
+      <label for="nombre">Nom *</label>
+      <input id="nombre" type="text" name="nombre" placeholder="Escriu el teu nom aqui..." required>
+      
+      <label for="email">Email *</label>
+      <input id="email" type="email" name="email" placeholder="tu@correu.com" required>
+      
+      <label for="mensaje">Missatge *</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Escriu el teu missatge aqui..." required> </textarea>
+    </form>
+
+    <!-- PASO 7: Este div mostrará el mensaje de confirmación con JavaScript -->
+    <!-- No borres este div, aunque ahora esté vacío -->
+    <div id="confirmacion"></div>
+
+  </section>
+  </main>
+
+
+  <!-- ============================================================
+       PIE DE PÁGINA
+       ============================================================ -->
+  <footer>
+
+    <!-- PASO 8: Cambia el nombre del negocio -->
+    <p>&copy;2026 Academia Ocicat. Tots els drets reservats.</p>
+    <p><a href="mailto:contacte@academiaocicat.cat"></a>contacte@academiaocicat.cat</p>
+
+  </footer>
+
+
+  <!-- Enlace al archivo JavaScript (siempre antes de cerrar </body ) -->
+
+</body>
+</html>
