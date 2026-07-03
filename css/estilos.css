@@ -79,6 +79,20 @@ section h2 {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+summary {
+  font-weight: bold;
+  color: var(--color-texto); 
+  padding: 0.5rem;
+}
+
+
 .boton {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -120,9 +134,11 @@ header {
 
 .logo {
   color: var(--color-blanco);
+  border-color: var(--color-secundario);
   font-size: 1.2rem;
   font-weight: bold;
 }
+
 
 .menu-toggle {
   display: block;
@@ -135,12 +151,31 @@ header {
   cursor: pointer;
 }
 
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
 nav {
- /* display: none; */
- display: flex;
+ display: none;
+ /* display: flex; */
  flex-direction: column;
  gap: 0.5rem;
  width: 100%;
+}
+
+@media (min-width: 768px) {
+  nav {
+    display:flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    width: auto;
+  }
+}
+
+nav.abierto {
+  display: flex;
 }
 
 nav a {
@@ -165,10 +200,23 @@ nav a:hover {
   margin-bottom: 1rem;
 }
 
+@media (min-width: 768px) {
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
 #hero p {
   font-size: 1rem;
   margin: 0 auto 1.5rem;
   opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+#hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+}
 }
 
 /* ── SECCIÓN SERVICIOS (versión móvil: una columna) ──────────── */
@@ -185,6 +233,15 @@ nav a:hover {
   background-color: var(--color-blanco);
 }
 
+@media (min-width: 768px) {
+  .tarjetas {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
 .tarjeta {
   background-color: var(--color-fondo);
   border: 1px solid #E2E8F0;
@@ -194,9 +251,35 @@ nav a:hover {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+@media (min-width: 768px) {
+  .tarjeta {
+    flex: 1 1 40%;
+    max-width:45%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .targeta {
+    flex: 1 1 30%;
+    max-width: 33%;
+  }  
+}
+
 .tarjeta img {
   width: 100px;
   height: 100px;
+  margin-bottom: 1rem;
+}
+
+.tarjeta h3 {
+  font-size: 1.25rem;
+  color: var(--color-secundario);
+  margin-bottom: 0.5rem;
+}
+
+.tarjeta p {
+  font-size: 1rem;
+  color: var(--color-texto-suave);
 }
 
 .tarjeta:hover {
@@ -211,7 +294,7 @@ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
 
 /* -->PARTE EXTRA: TESTIMONIOS CON PUNTUAJE CON ESTRELLAS. 
 No he averiguado como poner borde a las estrellas<-- */
-.testimonios-grid {
+#testimonios{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
@@ -246,6 +329,12 @@ No he averiguado como poner borde a las estrellas<-- */
 /* ── SECCIÓN SOBRE NOSOTROS ──────────────────────────────────── */
 #nosotros {
   /* Estilos para nosotros */
+  background-color: var(--color-fondo);
+}
+
+#nosotros p {
+  color: var(--color-texto-suave);
+  text-align: center;
 }
 
 /* -->PARTE EXTRA: FAQS <-- */
@@ -254,10 +343,142 @@ No he averiguado como poner borde a las estrellas<-- */
 /* ── SECCIÓN CONTACTO ────────────────────────── */
 #contacto {
   /* Estilos para contacto */
+  background-color: var(--color-blanco);
+}
+
+#contacto p {
+  text-align: center;
+  color: var(--color-texto-suave);
+  margin: 0 0 1.5rem 0;
+}
+
+#formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  #formulario-contacto {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+#formulario-contacto label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--color-secundario);
+}
+
+
+#formulario-contacto input, textarea {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid #CBD5E0;
+  color: var(--color-texto);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+#formulario-contacto input:focus, textarea:focus {
+  box-shadow: 0 0 0 3px rgba(46, 117, 182, 0.3);
+  border-color: var(--color-primario);
+  outline: none;
+} 
+
+#formulario-contacto textarea {
+  min-height: 125px;
+}
+
+#formulario-contacto .boton {
+  color: var(--color-blanco);
+  padding: 0.75rem 1.5rem;
 }
 
 /* ── FOOTER ──────────────────────────────────────────────────── */
 footer {
   /* Estilos para footer */
+  background-color: var(--color-secundario);
+  color: var(--color-blanco);
+  text-align: center;
   padding: 2rem 5%;
 }
+ footer a {
+  color: var(--color-blanco);
+  text-decoration: none;
+ }
+
+ footer a:hover {
+  text-decoration: underline;
+ }
+
+ #nav-footer {
+  display: flex;
+  text-align: center;
+  font-size: small;
+  background-color: var(--color-secundario);
+  padding-top: 0.5rem;
+  margin-bottom: 0.5rem;
+ }
+
+ @media (min-width: 768px) {
+  #nav-footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#nav-footer ul {
+  margin: 1.2rem 0 1.2rem 0;
+
+}
+
+ #nav-footer h4 {
+  color: var(--color-blanco);
+  font-size: 1.2em;
+ }
+
+ @media (min-width: 768px) {
+  #nav-footer h4 {
+    text-align: left;
+    justify-content: left;
+  }
+ }
+
+ @media (min-width: 768px) {
+  #nav-footer ul {
+    display: block;
+    justify-content:flex-end;
+    margin-left: 10%;
+  }
+}
+
+ #nav-footer li {
+  list-style: none;
+ }
+
+ @media (min-width: 768px) {
+  #nav-footer li {
+    text-align: left;
+    justify-content: left;
+    padding-left: 0.4rem;
+  }
+ }
+
+ #copy {
+  background-color: #111;
+  font-size: 0.8rem;
+  color: var(--color-blanco);
+  padding: 10px 0;
+  text-align: center;
+ }
+
+  @media (min-width: 768px) {
+  #copy div{
+    text-align: center;
+    justify-content: center;
+    padding-left: 0.4rem;
+  }
+ }

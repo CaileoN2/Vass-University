@@ -1,0 +1,109 @@
+<!-- Nombres y apellidos: Noelia Castillo Rodriguez -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PASO 1: Cambia el título por el nombre de tu negocio -->
+  <title>Academia OciCat</title>
+
+  <!-- Enlace a la hoja de estilos -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       CABECERA
+       Contiene el nombre del negocio y el menú de navegación.
+       ============================================================ -->
+  <header>
+
+    <!-- PASO 2: Cambia este texto por el nombre de tu negocio -->
+    <div class="logo">Academia OciCat</div>
+
+    <!-- Botón de menú para móvil (solo visible en pantallas pequeñas) -->
+    <button class="menu-toggle" id="menu-toggle">☰ Menú</button>
+
+    <!-- PASO 3: Puedes cambiar los textos de los enlaces si quieres -->
+    <nav id="navegacion">
+      <a href="index.html" title="Anar a la pàgina de inici">Inici</a>
+      <a href="#nosotros" title="Coneixer mes sobre nosaltres">Nosaltres</a>
+      <a href="servicios.html" title="Anar cap la llista de serveis">Serveis</a>
+      <a href="faqs.html" title="Anar a la llista de preguntes freqüents">Preguntes freqüents</a>
+      <a href="contacto.html" title="Anar al formulari de contacte">Contacte</a>
+      <!-- otros enlaces -->
+    </nav>
+
+  </header>
+  <main>
+
+    <!-- ============================================================
+        SECCIÓN SOBRE NOSOTROS
+        Un párrafo presentando el negocio.
+        ============================================================ -->
+    <section id="nosotros">
+
+      <h2>Academia OciCat: Qui som?</h2>
+
+      <!-- PASO 6: Escribe aquí una descripción de tu negocio imaginario -->
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, voluptatum temporibus. Harum in minima placeat cum dolor, nobis culpa assumenda repudiandae dolore explicabo esse voluptatum ut, ullam, architecto consectetur! Nihil!</p>
+    </section>
+
+
+      <!-- ============================================================
+        SECCIÓN CONTACTO
+        Formulario con nombre, email y mensaje.
+        ============================================================ -->
+    <section id="contacto">
+
+      <h2>Contacte</h2>
+      <p>Tens alguna pregunta? Pots revisar les <a href="faqs.html" title="Anar a la llista de preguntes freqüents">preguntes freqüents</a> i/o escriure'ns.</p>
+
+      <!-- Formulario de contacto -->
+      <form id="formulario-contacto" action="" method="post">
+        <label for="nombre">Nom *</label>
+        <input id="nombre" type="text" name="nombre" placeholder="Escriu el teu nom aqui..." required>
+        
+        <label for="email">Email *</label>
+        <input id="email" type="email" name="email" placeholder="elteu@correu.com" required>
+        
+        <label for="mensaje">Missatge *</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Escriu el teu missatge aqui..." required> </textarea>
+        <input type="submit" class="boton" value="Enviar missatge"></input>
+      </form>
+
+      <!-- PASO 7: Este div mostrará el mensaje de confirmación con JavaScript -->
+      <!-- No borres este div, aunque ahora esté vacío -->
+      <div id="confirmacion"></div>
+
+    </section>
+  </main>
+
+  <!-- ============================================================
+       PIE DE PÁGINA
+       ============================================================ -->
+
+    <nav id="nav-footer">
+      <ul>
+        <h4>Academia OciCat</h4>
+        <li><a href="#nosotros">Nosaltres</a></li>
+        <li><a href="servicios.html">Serveis</a></li>
+        <li><a href="">Events</a></li>
+        <li><a href="">Tornejos</a></li>
+        <li><a href="faqs.html">Preguntes freqüents</a></li>
+        <li><a href="#contacto">Contacte</a></li>
+      </ul>
+      <div id="copy">
+        <!-- PASO 8: Cambia el nombre del negocio -->
+        <p>Copyright &copy; 2026 Academia Ocicat. Tots els drets reservats.</p>
+        <p><a href="mailto:contacte@academiaocicat.cat" title="Enviar un mail">contacte@academiaocicat.cat</a></p>
+      </div>
+    </nav>
+  </footer>
+
+
+  <!-- Enlace al archivo JavaScript (siempre antes de cerrar </body ) -->
+<script src="js/javascript.js"></script>
+</body>
+</html>
